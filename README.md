@@ -7,6 +7,7 @@ Video games has been on a rise for over 30 years. Sold on the Wii, PlayStation, 
 
 ## **Getting the Project to Run**
 <br/>
+
 1. Make sure to have a version of Python3 insalled on your computer.
 2. After you have downloaded Python, clone the repository from github.
 3. Within your cloned repository, open up Visual Studio Code onto your computer and open the Video Games.ipynb
