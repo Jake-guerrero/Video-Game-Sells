@@ -1,4 +1,4 @@
-# Video-Game-Sales
+# Video Game Sales
 ### *Project by Jake Guerrero*
 <br/>
 
