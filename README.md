@@ -13,7 +13,7 @@ Video games has been on a rise for over 30 years. Sold on the Wii, PlayStation, 
 4. Once the ipynb opens, hit the Run All button on the top of the ipynb and let the application run through all of the code blocks.
 <br/>
 
-### Requirements MEt
+### Requirements Met
 <br/>
 This project incorporates the following Code Louisville requirements:
 1. Read two data files (JSON, CSV, Excel, etc.).
