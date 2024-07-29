@@ -1,4 +1,6 @@
 # Video Game Sales
+<br/>
+
 
 ## **Getting the Project to Run**
 
@@ -11,3 +13,15 @@
 * Matplotlib Pyplot
 5. Now you have installed the packages and you are in the directory, you can run the program directly from the command terminal by running "Vide Games.ipynb".
 6. Once you are finished with the program, make sure you deactivate your venv. Run "deactivate" from the command terminal with the project directory.
+<br/>
+
+## **Requirements Met**
+<br/>
+
+This project incorporates the following Code Louisville requirements:
+1. Read two data files.
+2. Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.
+3. Make 3 matplotlib or seaborn visualizations to display your data.
+4. Build a custom data dictionary and include it either in your README.
+5. Annotate your code with markdown cells in Jupyter Notebook.
+Also includes instructions on how to set up virtual environment set up to run the project.
