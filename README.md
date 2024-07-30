@@ -25,3 +25,11 @@ This project incorporates the following Code Louisville requirements:
 4. Build a custom data dictionary and include it either in your README.
 5. Annotate your code with markdown cells in Jupyter Notebook.
 Also includes instructions on how to set up virtual environment set up to run the project.
+
+| Title | Genre | Publisher |
+|:--------:|:--------:|:--------:|
+|  The title of the game   |  The genre the games story is based off of.  |  The people who made the game. |
+
+| Platform | Year/release_date | NA_Sales |
+|:--------:|:--------:|:--------:|
+|  The console the game was made to be played on.   |  The year/day the game was released.   |  The amount of copies sold in North America   |
