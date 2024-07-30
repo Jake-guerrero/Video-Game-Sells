@@ -11,7 +11,7 @@
 * Numpy
 * Pandas
 * Matplotlib Pyplot
-5. Now you have installed the packages and you are in the directory, you can run the program directly from the command terminal by running "Vide Games.ipynb".
+5. Now you have installed the packages and you are in the directory, you can run the program directly from the command terminal by running "Vide Games.py".
 6. Once you are finished with the program, make sure you deactivate your venv. Run "deactivate" from the command terminal with the project directory.
 <br/>
 
