@@ -4,32 +4,38 @@
 
 ## **Getting the Project to Run**
 
-1. Make sure to have a version of Python3 installed on your computer. Use pip install -- update pip if you have not done so already.
-2. After you have downloaded Python, clone the repository from GitHub.
-3. Within your cloned repository, it is best practice to setup a virtual enviroment(venv). This allows you to install any project requirements without interfering with what you currently have installed. To set up the venv, from within the cloned repo folder navigate to the file path line. Here you will type "cmd" into the file path to bring up the commnad terminal. From there run, "py -m venv env". This will create a folder named "env" within your repo folder. This will house the python venv. Once you have that created, you will need to activate it. Run ".\env\Scripts\activate" from the command terminal. You will know your venv is active when you see (env) ahead of your directory path. Now your venv is ready to use.
-4. From within that directory pip install the requirements.txt file by running "pip install -r requirements.txt". This will make sure you have the necessary pacages to run the program. For this program, we will be using these libraries:
-* Numpy
-* Pandas
-* Matplotlib Pyplot
-5. Now you have installed the packages and you are in the directory, you can run the program directly from the command terminal by typing "python vgproject.py".
-6. Once you are finished with the program, make sure you deactivate your venv. Run "deactivate" from the command terminal with the project directory.
+1. Install Python3: Ensure you have Python3 insalled on your computer. Use 'pip install --upgrade pip' to update pip if neccessary.
+2. Clone the Respository: Download or clone the repository from Github to a place you can find it specifically.
+3. Set Up a Virtual Environment:
+* Navigate to the cloned repository folder using your file explore.
+* Open a command terminal by typing 'cmd' into the file path line.
+* Create a virtual enviroment by running: 'py -m venv env'. This creates a folder named 'env' within your repository to house the virtual environment.
+* Activate the virtual environment by running: '.\env\Scripts\activate' (on Windows) or 'source env/bin/activate (on macOS/Linux). You will see '(env)' preceding your directory path, indicating that the virtual environment is active.
+4. Install Project Dependencies: Ensure you are in the project directory and install the required packages by running: 'pip install -r requirements.txt'. This will install the neccessary libraries for the project, which includes:
+* 'numpy'
+* 'pandas'
+* 'matplotlib'
+5. Run the Program: Execute the program by typing: 'python vgproject.py' in the command terminal.
+6. Deactivate the Virtual Environment: After you are finished with the program, deactivate the virutal environemnt by running: 'deactivate' in the command terminal.
 <br/>
 
 ## **Requirements Met**
 <br/>
 
 This project incorporates the following Code Louisville requirements:
-1. Read two data files.
-2. Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.
-3. Make 3 matplotlib or seaborn visualizations to display your data.
-4. Build a custom data dictionary and include it either in your README.
-5. Annotate your code with markdown cells in Jupyter Notebook.
-Also includes instructions on how to set up virtual environment set up to run the project.
+1. Read two data files: The project reads two data files.
+2. Data Cleaning and Merging: Clean the data and perform a pandas merge on the datasets, then calculate new values based on the merged data.
+3. Visualizations: Create three visualizations using 'matplotlib' or 'seaborn' to display the data.
+4. Data Dictionary: Build a custom data dictionary and include it in your README file.
+5. Code Annotation: Annotate your code with markdown cells in a Jupyter Notebook.
 
 | Title | Genre | Publisher |
 |:--------:|:--------:|:--------:|
-|  The title of the game   |  The genre the games story is based off of.  |  The people who made the game. |
+|  The title of the game   |  The genre the game's story  |  The entity responsible for creating the game |
 
 | Platform | Year/release_date | NA_Sales |
 |:--------:|:--------:|:--------:|
-|  The console the game was made to be played on.   |  The year/day the game was released.   |  The amount of copies sold in North America   |
+|  The console the game is designed for   |  The year orday the game was released   |  The number of copies sold in North America   |
+| Rank |  |  |
+|:--------:|:--------:|:--------:|
+|  The critic score for the game  |    |     |
