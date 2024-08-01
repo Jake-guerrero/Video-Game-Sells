@@ -53,6 +53,8 @@ call_of_duty
 
 ## The two codes above will help find if the data set is a float and to help visualize calculating the total.
 
+
+## Now to sort the games to help view one current year out of all the years given.
 sort_games = pd.concat([
      games[games['Year'] == 2015].sort_values(by='NA_Sales', ascending=False),
      games[games['Year'] != 2015]
@@ -79,13 +81,12 @@ games_top_5 = total_games.sort_values(ascending=False).head
 games_top_5
 
 
-
 games = games[games['Year'] == 2015]
 pub_2015_sales = games.groupby('Publisher')['NA_Sales'].sum()
 pub_2015_sales = pub_2015_sales.sort_values(ascending=False)
 pub_2015_sales.head()
 
-
+## This code helps look at which genre had the most games total out of all genres given in the csv.
 most_genre = games['Genre'].value_counts()
 top_genre = most_genre.idxmax()
 print(f"The top genre is: {top_genre}")
@@ -98,7 +99,7 @@ print("Genre Counts:")
 print(genre_counts)
 
 
-## Below we will see charts of how much games made, in copies, the top publishers and see the genre counts.
+## Below we will see charts of how much games made, in copies, the top publishers and see the genre counts. The first code below shows how much games made per copy in a bar graph.
 
 games_2015 = games[games['Year'] == 2015]
 total_games = games_2015.groupby('title')['NA_Sales'].sum()
@@ -113,6 +114,8 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
 
+
+## This line of code shows how much, in copies, did the publisher make in one year, 2015, in just North America.
 games_2015 = games[games['Year'] == 2015]
 pub_2015_sales = games_2015.groupby('Publisher')['NA_Sales'].sum()
 pub_2015_sales = pub_2015_sales.sort_values(ascending=False)
@@ -122,6 +125,8 @@ plt.title('Top Publishers by NA Sales in 2015')
 plt.axis('equal')
 plt.show()
 
+
+## The final graph helps show the counts for genre that the story of the game was made for.
 genre_counts = games['Genre'].value_counts()
 plt.figure(figsize=(10, 6))
 genre_counts.plot(kind='bar', color='skyblue')
