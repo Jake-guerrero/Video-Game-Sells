@@ -33,27 +33,18 @@ platform
 games = pd.merge(games_2024[['title', 'release_date']], platform, left_on='title', right_on='Name', how='left')
 games
 
+games = games.dropna()
+
 games.to_csv("games.csv")
 games
 
-
 ## We will now get the sum of the games, in physical copies, in North America.
 
-# Check total sales
-# Total = games['NA_Sales'].sum()
-# print(f"In North America, {Total} copies were made in video games.")
+# Checking the total sales in copies
+Total = games['NA_Sales'].sum()
+rounded_total = round(Total, 2)
+print("In North America", rounded_total, "in copies, was made in video games.")
 
-try:
-    games = pd.read_csv('games.csv')
-except FileNotFoundError:
-    print("Error: The file 'games.csv' was not found.")
-    exit()  # Exit if the file is not found
-
-if 'NA_Sales' in games.columns:
-    total = games['NA_Sales'].sum()
-    print(f"In North America, {total:.2f} copies were made in video games.")
-else:
-    print("Error: 'NA_Sales' column not found in the DataFrame.")
 
 ## Now to get the sum the total of the top five games in North America.
 
