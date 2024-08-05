@@ -36,6 +36,3 @@ This project incorporates the following Code Louisville requirements:
 | Platform | Year/release_date | NA_Sales |
 |:--------:|:--------:|:--------:|
 |  The console the game is designed for   |  The year orday the game was released   |  The number of copies sold in North America   |
-| Rank |  |  |
-|:--------:|:--------:|:--------:|
-|  The critic score for the game  |    |     |
