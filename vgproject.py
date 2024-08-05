@@ -41,6 +41,7 @@ games
 ## We will now get the sum of the games, in physical copies, in North America.
 
 # Checking the total sales in copies
+
 Total = games['NA_Sales'].sum()
 rounded_total = round(Total, 2)
 print("In North America", rounded_total, "in copies, was made in video games.")
@@ -50,7 +51,7 @@ print("In North America", rounded_total, "in copies, was made in video games.")
 
 ps4_games = games.loc[(games['Year'] == 2015) & (games['Platform'] == 'PS4')]
 ps4_games
-ps4_games["Platform"].unique()
+print(ps4_games["Platform"].unique())
 
 call_of_duty = games[games["title"]== "Call of Duty: Black Ops 3"].sum()
 call_of_duty
@@ -68,27 +69,27 @@ sort_games = pd.concat([
 sort_games = sort_games.replace('nan', np.nan)
 filter_year = sort_games[sort_games["Year"].notnull()]
 filter_year["Year"] = filter_year["Year"].astype(int)
-filter_year["Year"].unique()
+print(filter_year["Year"].unique())
 
 
 games_2015 = games[games['Year'] == 2015]
 games_totals = games_2015.groupby('title')['NA_Sales'].sum()
 games_totals
 top_games = games_totals.sort_values(ascending=False).head()
-top_games
+print(top_games)
 
 
 
 games_2015 = games[games['Year'] == 2015]
 total_games = games_2015.groupby('title')['NA_Sales'].sum()
 games_top_5 = total_games.sort_values(ascending=False).head
-games_top_5
+print(games_top_5)
 
 
 games = games[games['Year'] == 2015]
 pub_2015_sales = games.groupby('Publisher')['NA_Sales'].sum()
 pub_2015_sales = pub_2015_sales.sort_values(ascending=False)
-pub_2015_sales.head()
+print(f"The top publishers are: {pub_2015_sales.head()}")
 
 ## This code helps look at which genre had the most games total out of all genres given in the csv.
 most_genre = games['Genre'].value_counts()
