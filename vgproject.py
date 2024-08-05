@@ -25,18 +25,14 @@ platform.head()
 
 ## In the code above, I dropped the columns that will not be looked at and merging the two csv's into one. In the code below are the two csvs that will be looked at with the dropped columns.
 
-games_2024
-platform
 
 ## Below we will look at both the csvs into one merged csv.
 
 games = pd.merge(games_2024[['title', 'release_date']], platform, left_on='title', right_on='Name', how='left')
-games
 
 games = games.dropna()
 
 games.to_csv("games.csv")
-games
 
 ## We will now get the sum of the games, in physical copies, in North America.
 
@@ -50,11 +46,9 @@ print("In North America", rounded_total, "in copies, was made in video games.")
 ## Now to get the sum the total of the top five games in North America.
 
 ps4_games = games.loc[(games['Year'] == 2015) & (games['Platform'] == 'PS4')]
-ps4_games
 print(ps4_games["Platform"].unique())
 
 call_of_duty = games[games["title"]== "Call of Duty: Black Ops 3"].sum()
-call_of_duty
 
 ## The two codes above will help find if the data set is a float and to help visualize calculating the total.
 
@@ -74,39 +68,35 @@ print(filter_year["Year"].unique())
 
 games_2015 = games[games['Year'] == 2015]
 games_totals = games_2015.groupby('title')['NA_Sales'].sum()
-games_totals
 top_games = games_totals.sort_values(ascending=False).head()
 print(top_games)
 
 
 
-games_2015 = games[games['Year'] == 2015]
 total_games = games_2015.groupby('title')['NA_Sales'].sum()
 games_top_5 = total_games.sort_values(ascending=False).head
 print(games_top_5)
 
 
-games = games[games['Year'] == 2015]
-pub_2015_sales = games.groupby('Publisher')['NA_Sales'].sum()
+pub_2015_sales = games_2015.groupby('Publisher')['NA_Sales'].sum()
 pub_2015_sales = pub_2015_sales.sort_values(ascending=False)
 print(f"The top publishers are: {pub_2015_sales.head()}")
 
 ## This code helps look at which genre had the most games total out of all genres given in the csv.
-most_genre = games['Genre'].value_counts()
+most_genre = games_2015['Genre'].value_counts()
 top_genre = most_genre.idxmax()
 print(f"The top genre is: {top_genre}")
 
 
 ## Getting the genre counts to know what genre has produced the most games
 
-genre_counts = games['Genre'].value_counts()
+genre_counts = games_2015['Genre'].value_counts()
 print("Genre Counts:")
 print(genre_counts)
 
 
 ## Below we will see charts of how much games made, in copies, the top publishers and see the genre counts. The first code below shows how much games made per copy in a bar graph.
 
-games_2015 = games[games['Year'] == 2015]
 total_games = games_2015.groupby('title')['NA_Sales'].sum()
 games_top_5 = total_games.sort_values(ascending=False).head()
 games_top_5
@@ -121,7 +111,6 @@ plt.show()
 
 
 ## This line of code shows how much, in copies, did the publisher make in one year, 2015, in just North America.
-games_2015 = games[games['Year'] == 2015]
 pub_2015_sales = games_2015.groupby('Publisher')['NA_Sales'].sum()
 pub_2015_sales = pub_2015_sales.sort_values(ascending=False)
 plt.figure(figsize=(10, 6))
@@ -132,7 +121,7 @@ plt.show()
 
 
 ## The final graph helps show the counts for genre that the story of the game was made for.
-genre_counts = games['Genre'].value_counts()
+genre_counts = games_2015['Genre'].value_counts()
 plt.figure(figsize=(10, 6))
 genre_counts.plot(kind='bar', color='skyblue')
 plt.title('Genre Counts')
