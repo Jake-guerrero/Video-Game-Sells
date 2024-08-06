@@ -30,7 +30,7 @@ Using two datasets sourced from Kaggle, I will analyze these questions to create
 After running the code, three visualizations will appear:
 1. <strong>Top Five Games Sold (2015)</strong>: This visual displays the top five games sold in millions for the year 2015.
 2. <strong>Top Five Publishers by Game Count</strong>: This visual shows the top five publishers (Activision, Warner Bros. Interactive Entertainment, Take-Two Interactive, Bethesda Softworks, and Electronic Arts) and the percentage of total games each studio has produced.
-3. <strong>Total Games by Genre (2015)</strong>: This visual illustrates the number of games made for each genre in 2015.
+3. <strong>Total Games by Genre (2015)</strong>: This visual illustrates the number of games made for each genre in the year 2015.
 
 To navigate through the visuals, close each window using the X button in the top-left or top-right corner of each visuals.
 
