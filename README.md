@@ -23,6 +23,8 @@ Using two datasets sourced from Kaggle, I will analyze these questions to create
 * '<strong>pandas</strong>'
 * '<strong>matplotlib</strong>'
 5. Run the Program: Execute the program by typing: '<strong>python vgproject.py</strong>' in the command terminal. If you are using Python3, execute the program by typing: '<strong>python3 vgproject.py</strong>'.
+* If you are not in the video games directory, use the '<strong>cd</strong>' command to go into the Video Game Sales directory.
+* When the code is run through powershell, execute the program by typing: <strong>python .\vgproject.py</strong>'.
 6. Deactivate the Virtual Environment: After you are finished with the program, deactivate the virutal environemnt by running: '<strong>deactivate</strong>' in the command terminal.
 
 After running the code, three visualizations will appear:
@@ -30,7 +32,7 @@ After running the code, three visualizations will appear:
 2. <strong>Top Five Publishers by Game Count</strong>: This visual shows the top five publishers (Activision, Warner Bros. Interactive Entertainment, Take-Two Interactive, Bethesda Softworks, and Electronic Arts) and the percentage of total games each studio has produced.
 3. <strong>Total Games by Genre (2015)</strong>: This visual illustrates the number of games made for each genre in 2015.
 
-To navigate through the visuals, close each window using the X button in the top-left corner.
+To navigate through the visuals, close each window using the X button in the top-left or top-right corner of each visuals.
 
 <br/>
 

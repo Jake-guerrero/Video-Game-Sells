@@ -49,6 +49,7 @@ ps4_games = games.loc[(games['Year'] == 2015) & (games['Platform'] == 'PS4')]
 print(ps4_games["Platform"].unique())
 
 call_of_duty = games[games["title"]== "Call of Duty: Black Ops 3"].sum()
+print(call_of_duty)
 
 ## The two codes above will help find if the data set is a float and to help visualize calculating the total.
 
