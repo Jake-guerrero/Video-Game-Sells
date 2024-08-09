@@ -8,20 +8,20 @@ import matplotlib.pyplot as plt
 ## Loading the data and cleaning what needs to be edited out.
 
 platform = pd.read_csv('vgsales.csv')
-platform.head()
+print(platform)
 
 games_2024 = pd.read_csv('vgchartz-2024.csv')
-games_2024.head(10)
+print(games_2024)
 
 ## This data set contained images that did not show on vs code, only giving the url to these pictures of the games. Dropped the column that used the images helps with visualization when looking at the chart. Along with dropping the picture column, four other columns were dropped: na_sales, jp_sales, pal_sales and other_sales. I wanted to get the total sales of the games all together, not what countries had the sales of the specific games.
 
 drop = ['img', 'developer', 'critic_score', 'total_sales', 'jp_sales', 'pal_sales', 'other_sales', 'last_update']
 games_2024 = games_2024.drop(columns=drop)
-games_2024.head()
+print(games_2024)
 
 drop = ['EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales']
 platform = platform.drop(columns=drop)
-platform.head()
+print(platform)
 
 ## In the code above, I dropped the columns that will not be looked at and merging the two csv's into one. In the code below are the two csvs that will be looked at with the dropped columns.
 
@@ -33,7 +33,7 @@ games = pd.merge(games_2024[['title', 'release_date']], platform, left_on='title
 games = games.dropna()
 
 games.to_csv("games.csv")
-
+print(games)
 ## We will now get the sum of the games, in physical copies, in North America.
 
 # Checking the total sales in copies
@@ -69,6 +69,7 @@ print(filter_year["Year"].unique())
 
 games_2015 = games[games['Year'] == 2015]
 games_totals = games_2015.groupby('title')['NA_Sales'].sum()
+print(games_totals)
 top_games = games_totals.sort_values(ascending=False).head()
 print(top_games)
 
