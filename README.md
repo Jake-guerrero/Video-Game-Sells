@@ -11,6 +11,7 @@ Using two datasets sourced from Kaggle, I will analyze these questions to create
 ## **Getting the Project to Run**
 
 1. Install Python3: Ensure you have Python3 insalled on your computer. Use '<strong>pip install --upgrade pip</strong>' to update pip if neccessary in the terminal.
+* If you are running on Windows, the command would be '<strong>py -m pip instsall --upgrade pip</strong>'. Or use '<strong>pip3 -m pip install --upgrade pip</strong>' if you are using macOS.
 2. Clone the Respository: Download or clone the repository from Github to a directory of your choice.
 * Find and click on the green "<strong>Code</strong>" button at the top of the repository page, copy the URL, and run the following command in your terminal: "<strong>git clone [URL]</strong>. Replace '<strong>[URL]</strong> with the URL you copied.
 3. Set Up a Virtual Environment:
